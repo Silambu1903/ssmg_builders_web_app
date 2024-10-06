@@ -1,0 +1,76 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    z-index: 10; /* To make sure it floats above everything else */
+  }
+  
+  /* Navbar logo and name */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navbar-logo span {
+    font-size: 16px;
+    color: #333; /* Dark color for text */
+    font-weight: bold;
+  }
+  
+  /* Navbar menu */
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex: 1; /* Allows the menu to take up remaining space */
+    justify-content: center; /* Center the menu */
+  }
+  
+  .navbar-menu li {
+    display: inline;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu a:hover {
+    color: #1c75bc; /* Hover effect for links */
+  }
+  
+  /* Navbar button */
+  .navbar-button {
+    right:  30px; /* Push the button to the right */
+  }
+
+  .navbar-button button {
+    padding: 10px 20px;
+    background-color: #0C447C;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-button button:hover {
+    background-color: #135b8b; /* Darker blue on hover */
+  }

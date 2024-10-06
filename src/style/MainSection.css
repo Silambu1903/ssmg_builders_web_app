@@ -1,0 +1,190 @@
+.main-section {
+  position: relative;
+  height: 100vh;
+  margin-top: 0;
+}
+
+.main-banner {
+  background: url('/public/assets/wireframe.png') no-repeat center center/cover;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-banner h1 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
+
+.highlight {
+  color: #fff;
+  background-color: #000;
+  padding: 5px 10px;
+}
+
+.quote-text {
+  font-size: 30px; /* Increase font size for more impact */
+  color: white;    /* White text */
+  font-weight: bold;
+  width: 750px;   
+  line-height: 1.4;
+  left: 15px;
+  padding-top: 60px;
+  padding-left: 25px;
+  top: 20px;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out; /* Add a fade-in animation */
+  margin-right: auto; /* Push to the left side */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Card Styling */
+
+.appointment-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px; 
+  position: absolute;
+  right: 70px;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-card h2 {
+  text-align: center; 
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0098D8;
+}
+
+.appointment-card p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5d5d5d;
+}
+
+.appointment-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.appointment-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0C447C;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.appointment-card button:hover {
+  background-color: #0C447C;
+}
+
+.appointment-card small {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #5d5d5d;
+}
+
+.appointment-card small a {
+  color: #0C447C;
+  text-decoration: none;
+}
+
+.description {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-banner h1 {
+    font-size: 40px; /* Smaller font size for smaller screens */
+  }
+
+  .quote-text {
+    font-size: 24px;  /* Adjust quote text size for tablets */
+    width: 90%;       /* Make quote text responsive */
+    padding: 20px;
+  }
+
+  .appointment-card {
+    width: 300px;     /* Smaller card width for tablets */
+    right: 30px;
+    padding: 20px;
+  }
+
+  .appointment-card h2 {
+    font-size: 18px;  /* Adjust heading size for smaller screens */
+  }
+
+  .appointment-card button {
+    padding: 10px;    /* Adjust button padding for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-banner h1 {
+    font-size: 32px; /* Smaller font size for mobile */
+  }
+
+  .quote-text {
+    font-size: 20px; /* Adjust font size for mobile */
+    width: 90%;      /* Full-width on mobile screens */
+    padding: 15px;
+  }
+
+  .appointment-card {
+    width: 90%;      /* Full-width card on mobile */
+    right: 5%;
+    padding: 15px;
+  }
+
+  .appointment-card h2 {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .appointment-card p {
+    font-size: 14px; /* Adjust text size for mobile */
+  }
+
+  .appointment-card button {
+    font-size: 14px; /* Smaller button text for mobile */
+    padding: 10px;   /* Adjust button padding for mobile */
+  }
+
+  .description {
+    padding: 20px;  /* Reduce padding on mobile */
+    font-size: 16px;
+  }
+}

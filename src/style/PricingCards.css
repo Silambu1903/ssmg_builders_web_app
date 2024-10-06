@@ -1,0 +1,169 @@
+/* Pricing Container */
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 70px;
+    flex-wrap: wrap;
+}
+
+/* Individual Pricing Card */
+.pricing-card {   
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 32%; 
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9); /* Move down and shrink initially */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Smooth transition */
+    will-change: opacity, transform; /* Optimizes rendering */
+}
+
+.pricing-card.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Fade-up and scale-in when in view */
+}
+
+/* Add a slight staggered delay for each card */
+.pricing-card:nth-child(1).in-view {
+    transition-delay: 0.1s;
+}
+.pricing-card:nth-child(2).in-view {
+    transition-delay: 0.2s;
+}
+.pricing-card:nth-child(3).in-view {
+    transition-delay: 0.3s;
+}
+
+.pricing-card h2 {
+    font-size: 22px;
+    color: #fff;
+    background-color: #0C447C;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.pricing-card p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.pricing-card .card-body {
+    padding: 30px; /* Add padding below the header */
+}
+
+.pricing-card h3 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pricing-card .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Collapsible Section */
+.collapsible-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.collapsible-content {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.collapsible-content li {
+    font-size: 14px;
+    margin-bottom: 5px; 
+}
+
+/* Responsive behavior for tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .pricing-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+    
+    .pricing-card {
+        width: 100%; /* Take full width of the screen */
+        max-width: 600px;
+    }
+
+    .pricing-card h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .pricing-card .card-body {
+        padding: 20px;
+    }
+
+    .pricing-card h3 {
+        font-size: 28px;
+    }
+
+    .pricing-card ul li {
+        font-size: 14px;
+    }
+}
+
+/* Responsive behavior for mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .pricing-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pricing-card {
+        width: 100%;
+    }
+
+    .pricing-card h2 {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .pricing-card .card-body {
+        padding: 15px;
+    }
+
+    .pricing-card h3 {
+        font-size: 24px;
+    }
+
+    .pricing-card ul li {
+        font-size: 12px;
+    }
+}
